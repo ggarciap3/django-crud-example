@@ -9,7 +9,19 @@ class ProductForm(forms.ModelForm):
         self.fields['name'].widget.attrs = {
             'class': 'form-control col-md-6'
         }
+        self.fields['producto'].widget.attrs = {
+            'class': 'form-control col-md-6'
+        }
+        self.fields['lote'].widget.attrs = {
+            'class': 'form-control col-md-6'
+        }
+        self.fields['datecompra'].widget.attrs = {
+            'class': 'form-control col-md-6'
+        }
         self.fields['description'].widget.attrs = {
+            'class': 'form-control col-md-6'
+        }
+        self.fields['evidencia'].widget.attrs = {
             'class': 'form-control col-md-6'
         }
         self.fields['price'].widget.attrs = {
@@ -20,4 +32,4 @@ class ProductForm(forms.ModelForm):
 
     class Meta:
         model = Product
-        fields = ('name', 'description', 'price')
+        fields = ('name','producto','lote','datecompra', 'description','evidencia','price')
